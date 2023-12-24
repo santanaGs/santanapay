@@ -8,13 +8,16 @@ export const AppContext = createContext<AppContextType | null>(null);
 
 function AppContextComponent({children}: AppContextComponentProps) {
     // Variables
-    const [cartNumber, setCartNumber] = useState<any>(1)
+    const [cartNumber, setCartNumber] = useState<any>(1);
+    const [path, setPath] = useState<string>('');
 
     // Rendering
     return(
         <AppContext.Provider value={{
             cartNumber,
-            setCartNumber
+            setCartNumber,
+            path,
+            setPath
         }}>
             {children}
         </AppContext.Provider>
