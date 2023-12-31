@@ -9,7 +9,8 @@ const Shop = () => {
     return(
         <DivS>
             <Cancel>Cancelar pedido</Cancel>
-            <Next onClick={() => {navigate('/shipping')}}>Continuar comprando</Next>
+            {/* <Next onClick={() => {navigate('/shipping')}}>Continuar comprando</Next> */}
+            <Next>Continuar comprando</Next>
         </DivS>
     )
 }

@@ -4,3 +4,16 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+.confirmButton{
+  border: none !important;
+  border-radius: 0.25rem !important;
+  background: #2FBD6A !important;
+  color: #F7FAFC;
+  cursor: pointer;
+  padding: 1rem 5rem;
+}
+
+.confirmButton:active,.confirmButton:focus{
+  box-shadow: 0 0 0 3px rgba(112, 224, 102, 0.5) !important;
+}
