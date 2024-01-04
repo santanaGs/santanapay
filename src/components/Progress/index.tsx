@@ -39,7 +39,7 @@ export default function ProgessBar(){
                 <CheckProgress src={disableIcon}/>
             )}
             <HeaderProgress active={path == payment}>-</HeaderProgress>
-            <HeaderProgress>Pagamento</HeaderProgress>
+            <HeaderProgress active={path == payment}>Pagamento</HeaderProgress>
         </Header>
         </>
     )

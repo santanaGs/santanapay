@@ -65,6 +65,6 @@ export default function Account() {
         <LoginButton onClick={checkValidation}>Entrar</LoginButton>
       </LoginContainer>
       <Shop />
-    </Container>
+    </Container> 
   );
 }
