@@ -11,6 +11,10 @@ export const Header = styled.div`
     width: 100%;
     margin-bottom: 3.87rem;
 
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
 `
 export const HeaderProgress = styled.p<ProgessActive>`
     color: ${props => props.active ? "#2FBD6A" : "#2D3748"};

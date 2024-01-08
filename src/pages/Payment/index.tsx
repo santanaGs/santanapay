@@ -4,7 +4,7 @@ import { AppContextType } from "../../context/types";
 import Shop from "../../components/Shop";
 import { Container } from "../Account/styles";
 import { Details } from "../../styles";
-import { Address, DivAddress, SelectS } from "../Shipping/styles";
+import { Address, DivAddress, DivTwoInputs, SelectS } from "../Shipping/styles";
 
 // Data
 import { address } from "../../data/data";
@@ -33,10 +33,13 @@ export default function Payment(){
         </SelectS>
         </DivAddress>
         <>
-            <InputS type="text" label="Nome do cartão"  />
-            <InputS type="text" label="Número do cartão" />
+            <InputS type="text" label="Nome do cartão"   />
+            <InputS type="text" label="Número do cartão"  />
         </>
-
+        <DivTwoInputs>
+            <InputS type="text" label="Expiração" />
+            <InputS type="text" label="CVC" />
+        </DivTwoInputs>
         <Shop />
       </Container> 
     )

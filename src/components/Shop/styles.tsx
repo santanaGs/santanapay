@@ -8,6 +8,10 @@ export const DivS = styled.div`
     align-items: center;
     justify-content: flex-end;
     gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const Cancel = styled.button`
@@ -23,6 +27,16 @@ export const Cancel = styled.button`
 
     &:hover{
         border-bottom: 1px solid #D1402C;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        padding: 0.75rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 0.25rem;
+        background: rgba(209, 64, 44, 0.10);
     }
 `
 
@@ -41,5 +55,9 @@ export const Next = styled.button`
 
     &:hover{
         background-color: #22834a;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
     }
 `

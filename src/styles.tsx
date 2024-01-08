@@ -6,6 +6,13 @@ export const Main = styled.main`
     display: flex;
     justify-content: space-between;
     gap: 8rem;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        flex-direction: column;
+        margin: 2.5rem auto;
+        gap: 4rem;
+    }
 ` 
 export const Container = styled.div`
     display: flex;

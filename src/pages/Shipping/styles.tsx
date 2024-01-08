@@ -4,6 +4,10 @@ export const DivTwoInputs = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        gap: 1rem;
+    }
 ` 
 
 export const Address = styled.p`

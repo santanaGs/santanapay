@@ -12,6 +12,10 @@ export const Title = styled.h1`
 
 export const ProductImage = styled.img`
     margin-block: 1.5rem;
+    
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 export const PriceContainer = styled.div`
