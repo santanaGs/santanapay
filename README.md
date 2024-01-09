@@ -22,3 +22,5 @@ Se trata de um aplicação web fullstack simulando um carrinho de compras
 ## 🎨 Layout Figma
 
 - https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?type=design&node-id=198105-3722&mode=design&t=JeoWw9VgiHMspyY2-0
+
+FevXZumFpc -> senha web host

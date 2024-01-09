@@ -1,24 +1,24 @@
 module.exports=
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "santanapay",
-    "host": "127.0.0.1",
+    "username": "if0_35758157",
+    "password": 'FevXZumFpc',
+    "database": "if0_35758157_santanapay",
+    "host": "sql308.infinityfree.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "santanapay",
-    "host": "127.0.0.1",
+    "username": "if0_35758157",
+    "password": 'FevXZumFpc',
+    "database": "if0_35758157_santanapay",
+    "host": "sql308.infinityfree.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "santanapay",
-    "host": "127.0.0.1",
+    "username": "if0_35758157",
+    "password": 'FevXZumFpc',
+    "database": "if0_35758157_santanapay",
+    "host": "sql308.infinityfree.com",
     "dialect": "mysql"
   }
 }
