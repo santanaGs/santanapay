@@ -1,24 +1,24 @@
 module.exports=
 {
   "development": {
-    "username": "if0_35758157",
-    "password": 'FevXZumFpc',
-    "database": "if0_35758157_santanapay",
-    "host": "sql308.infinityfree.com",
+    "username": "uveolyrildur0883",
+    "password": 'BjZO9f8Ib81givDba9J6',
+    "database": "b2ifaw4ztu8jkhidfzz7",
+    "host": "b2ifaw4ztu8jkhidfzz7-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "if0_35758157",
-    "password": 'FevXZumFpc',
-    "database": "if0_35758157_santanapay",
-    "host": "sql308.infinityfree.com",
+    "username": "uveolyrildur0883",
+    "password": 'BjZO9f8Ib81givDba9J6',
+    "database": "b2ifaw4ztu8jkhidfzz7",
+    "host": "b2ifaw4ztu8jkhidfzz7-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "if0_35758157",
-    "password": 'FevXZumFpc',
-    "database": "if0_35758157_santanapay",
-    "host": "sql308.infinityfree.com",
+    "username": "uveolyrildur0883",
+    "password": 'BjZO9f8Ib81givDba9J6',
+    "database": "b2ifaw4ztu8jkhidfzz7",
+    "host": "b2ifaw4ztu8jkhidfzz7-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   }
 }
