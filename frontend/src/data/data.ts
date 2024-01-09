@@ -6,3 +6,9 @@ export const address = [
     { id: 5, name: 'Loja', city: 'Recife', road: 'Avenida Boa Viagem', neighborhood: 'Boa Viagem', number: '987', state: 'Pernambuco' },
   ];
   
+
+  export const cards = [
+    { id: 1, name: 'Nubank', user_name: 'Gabriel Santana', number_card: '1234 1234 1234 1234', exp: '12/30', cvc: 123 },
+    { id: 1, name: 'Inter', user_name: 'Gabriel Santana', number_card: '4321 4321 4321 4321', exp: '11/29', cvc: 321 },
+  ];
+  

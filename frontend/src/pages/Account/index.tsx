@@ -1,5 +1,5 @@
 // Imports
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import InputS from "../../components/Inputs";
 import Shop from "../../components/Shop";
 import { Details } from "../../styles";
@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 
 // Sweet Alert
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 // Context
 import { AppContext } from "../../context/context";

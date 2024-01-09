@@ -17,11 +17,11 @@ const Resume: React.FC = () => {
 
     // Functions
     async function addCart() {
-        setCartNumber(prev => prev + 1);
+        setCartNumber(cartNumber + 1);
     }
 
     async function removeCart() {
-        setCartNumber(prev => prev - 1)
+        setCartNumber(cartNumber - 1)
     }
 
     const price = 15.22 * cartNumber;

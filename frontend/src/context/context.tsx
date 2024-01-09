@@ -1,5 +1,5 @@
 // Imports
-import React, {createContext, useState} from "react";
+import {createContext, useState} from "react";
 import {AppContextComponentProps, AppContextType} from './types';
 
 // Context

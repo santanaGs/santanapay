@@ -1,5 +1,5 @@
 // Imports
-import React,{ useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { CheckProgress, Header, HeaderProgress } from "./styles";
 
 // Images
