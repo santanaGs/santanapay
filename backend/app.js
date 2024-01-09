@@ -1,6 +1,5 @@
 const db = require("./database/models/")
 
-
 const express = require('express')
 const app = express()
 const port = 3000
@@ -34,9 +33,10 @@ app.post('/create-card', (req,res) => {
           message: 'Cartão cadastrado',
           data: cardUser
       })
-  }).catch((() => {
+  }).catch(((error) => {
       return res.json({
-          message: 'error'
+          message: 'error',
+          err: error
       })
   }))
 })
@@ -64,3 +64,33 @@ app.post('/create-address', (req,res) => {
       })
   }))
 })
+
+app.get('/orders', (req, res) => {
+  db.Orders.findAll()
+    .then((orders) => {
+      res.json(orders);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+});
+
+app.post('/create-order', (req, res) => {
+  var data = req.body;
+
+  db.Orders.create(data)
+    .then((orderUser) => {
+      return res.json({
+        error: false,
+        message: 'Pedido cadastrado',
+        data: orderUser,
+      });
+    })
+    .catch((err) => {  // <-- Fix the typo here
+      console.error(err);
+      return res.json({
+        message: 'Error creating order',
+      });
+    });
+});
