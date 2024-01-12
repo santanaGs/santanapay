@@ -10,37 +10,37 @@ import disableIcon from '../../assets/svg/CheckDisable.svg'
 import { AppContext } from "../../context/context";
 import { AppContextType } from "../../context/types";
 
-export default function ProgessBar(){
+export default function ProgessBar() {
     // Context
-    const {path, setPath} = useContext(AppContext) as AppContextType;
-    
+    const { path, setPath } = useContext(AppContext) as AppContextType;
+
     // useEffect
     useEffect(() => {
         setPath(window.location.href);
-    },[])
+    }, [])
 
     // Varaibles
-    const shipping = 'http://localhost:5173/shipping';
-    const payment = 'http://localhost:5173/payment';
+    const shipping = 'https://santanapay.vercel.app/shipping';
+    const payment = 'https://santanapay.vercel.app/payment';
 
     // Rendering
-    return(
+    return (
         <>
-        <Header>
-            <HeaderProgress active>Conta</HeaderProgress>
-            <HeaderProgress  active>-</HeaderProgress>
-            <CheckProgress src={activeIcon}/>
-            <HeaderProgress active>-</HeaderProgress>
-            <HeaderProgress active={path == shipping || path == payment}>Envio</HeaderProgress>
-            <HeaderProgress active={path == shipping || path == payment}>-</HeaderProgress>
-            {path == payment ? (
-                <CheckProgress src={activeIcon}/>
-            ): (
-                <CheckProgress src={disableIcon}/>
-            )}
-            <HeaderProgress active={path == payment}>-</HeaderProgress>
-            <HeaderProgress active={path == payment}>Pagamento</HeaderProgress>
-        </Header>
+            <Header>
+                <HeaderProgress active>Conta</HeaderProgress>
+                <HeaderProgress active>-</HeaderProgress>
+                <CheckProgress src={activeIcon} />
+                <HeaderProgress active>-</HeaderProgress>
+                <HeaderProgress active={path == shipping || path == payment}>Envio</HeaderProgress>
+                <HeaderProgress active={path == shipping || path == payment}>-</HeaderProgress>
+                {path == payment ? (
+                    <CheckProgress src={activeIcon} />
+                ) : (
+                    <CheckProgress src={disableIcon} />
+                )}
+                <HeaderProgress active={path == payment}>-</HeaderProgress>
+                <HeaderProgress active={path == payment}>Pagamento</HeaderProgress>
+            </Header>
         </>
     )
 }

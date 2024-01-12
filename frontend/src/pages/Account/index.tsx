@@ -31,10 +31,10 @@ export default function Account() {
 
   // validations
   function checkValidation() {
-    if (email !== 'gabrielsantana2267@gmail.com' || password !== '123@Mudar') {
+    if (email !== 'teste' || password !== '123@teste') {
       console.log('Erro');
       showSwal();
-    } else {navigate('/shipping')}
+    } else { navigate('/shipping') }
   }
 
   // sweet modal
@@ -64,6 +64,6 @@ export default function Account() {
         <LoginButton onClick={checkValidation}>Entrar</LoginButton>
       </LoginContainer>
       <Shop />
-    </Container> 
+    </Container>
   );
 }

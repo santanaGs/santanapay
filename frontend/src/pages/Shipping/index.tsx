@@ -13,16 +13,7 @@ import Shop from "../../components/Shop";
 // Context
 import { AppContext } from "../../context/context";
 import { AppContextType } from "../../context/types";
-
-// Data
-import { address } from "../../data/data";
-
-// useQuery
-import { useQuery } from "@tanstack/react-query";
-
-// Services
 import api from "../../services/api";
-import { useUpdateEffect } from "usehooks-ts";
 
 export default function Shipping() {
   // useContext
@@ -38,7 +29,8 @@ export default function Shipping() {
 
 
   // variable
-  const [data, setData] = useState<any[{}]>([])
+  const [data, setData] = useState<any[]>([]);
+
 
   // Variables
   const [selectedItem, setSelectedItem] = useState(null);
@@ -49,7 +41,7 @@ export default function Shipping() {
   const [selectedState, setSelectedState] = useState('');
   const [roadNeighbothood, setRoadNeighbothood] = useState('');
 
-  const handleSelectChange = (event: any) => {
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
 
     console.log(selectedValue, selectedRoad, selectedNeighborhood);
@@ -76,7 +68,7 @@ export default function Shipping() {
         <Address>Usar endereço salvo</Address>
         <SelectS onChange={handleSelectChange}>
           <option value="">--Selecione um endereço--</option>
-          {data.map((item: any) => {
+          {data.map((item) => {
             return (
               <option key={item.id} value={item.nickName}>{item.nickName}</option>
             )
