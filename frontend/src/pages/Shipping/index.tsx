@@ -21,11 +21,18 @@ export default function Shipping() {
 
   // useEffect
   useEffect(() => {
-    setPath(window.location.href);
-    api.get('/address').then((res) => {
-      setData(res.data)
-    })
-  }, [])
+    const fetchData = async () => {
+      try {
+        setPath(window.location.href);
+        const res = await api.get('/address');
+        setData(res.data);
+      } catch (err) {
+        // Handle errors if needed
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
   // variable
@@ -68,11 +75,15 @@ export default function Shipping() {
         <Address>Usar endereço salvo</Address>
         <SelectS onChange={handleSelectChange}>
           <option value="">--Selecione um endereço--</option>
-          {data.map((item) => {
-            return (
-              <option key={item.id} value={item.nickName}>{item.nickName}</option>
-            )
-          })}
+          {data.length > 0 ? (
+            data.map((item) => (
+              <option key={item.id} value={item.nickName}>
+                {item.nickName}
+              </option>
+            ))
+          ) : (
+            <></>
+          )}
         </SelectS>
       </DivAddress>
       <>

@@ -34,7 +34,7 @@ app.post('/login', async (req, res) => {
   if(user === null){
     return res.status(400).json({
       erro: true,
-      mensagem: "Email ou senha inválido! Não cadastrado",
+      mensagem: "Usuário não localizado em nossa base de dados, realize o cadastro.",
       status: 400,
     })
   }

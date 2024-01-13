@@ -12,17 +12,20 @@ export const LoginContainer = styled.div`
     justify-content: flex-end;
 `
 
-export const RegisterLink = styled.a`
-    color: #2D3748;
-    font-size: 1rem;
+export const RegisterLink = styled.button`
     font-weight: 500;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: .3s;
-
+    border: none;
+    background-color: red;
+    padding: 1rem .7rem;
+    border-radius: .2rem;
+    color: #fff;
+    cursor: pointer;
 
     &:hover{
-        border-bottom: 1px solid #2D3748;
+        background-color: #8d1e1e;
     }
 `
 

@@ -22,11 +22,18 @@ export default function Payment() {
 
     // useEffect
     useEffect(() => {
-        setPath(window.location.href);
-        api.get('/cards').then((res) => {
-            setData(res.data)
-        })
-    }, [])
+        const fetchData = async () => {
+            try {
+                setPath(window.location.href);
+                const res = await api.get('/cards');
+                setData(res.data.cards);
+            } catch (err) {
+                // Tratar erros, se necessário
+            }
+        };
+
+        fetchData();
+    }, []);
 
     // variables
     const [selectedItem, setSelectedItem] = useState(null);
@@ -61,11 +68,15 @@ export default function Payment() {
                 <Address>Usar cartão salvo</Address>
                 <SelectS onChange={handleSelectChange}>
                     <option value="">--Selecione um cartão--</option>
-                    {data.map((item) => {
-                        return (
-                            <option key={item.id} value={item.nickName}>{item.nickName}</option>
-                        )
-                    })}
+                    {data.length > 0 ? (
+                        data.map((item) => (
+                            <option key={item.id} value={item.nickName}>
+                                {item.nickName}
+                            </option>
+                        ))
+                    ) : (
+                        <></>
+                    )}
                 </SelectS>
             </DivAddress>
             <>
