@@ -46,7 +46,7 @@ export default function Account() {
       setEmail('');
       setPassword('');
       setErr('');
-    } catch (err) {
+    } catch (err: any) {
       setErr(err.response.data.mensagem);
       showSwal();
     }
@@ -66,7 +66,7 @@ export default function Account() {
         console.log(res.data);
         setErr('Cadastrado com sucesso!');
         showSwal();
-      } catch (err) {
+      } catch (err: any) {
         setErr(err.response.data.mensagem);
         showSwal();
       }
